@@ -1,0 +1,28 @@
+{
+	"name": "C# Devcontainer",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
+
+	"features": {
+        "ghcr.io/jlaundry/devcontainer-features/mssql-odbc-driver:1": {
+            "version": "latest"
+        }
+    },
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"muhammad-sammy.csharp",
+				"GitHub.copilot",
+				"ms-dotnettools.csharp",
+				"ms-mssql.mssql"
+			]
+		}
+	},
+
+	"postCreateCommand": "dotnet restore",
+	"remoteUser": "vscode"
+}
